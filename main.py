@@ -1,4 +1,3 @@
-from rich import print
 import telebot
 from telebot import types, util
 
