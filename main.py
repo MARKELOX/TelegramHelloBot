@@ -2,16 +2,13 @@ from rich import print
 import telebot
 from telebot import types, util
 
-
-#from config import messagechat
-
 bot = telebot.TeleBot('token')
     
 @bot.message_handler(content_types=['new_chat_members']) #Создаем функцию когда при заходе выполняется функция
 def start(message):
     markup = types.InlineKeyboardMarkup()
-    osnovgroup= types.InlineKeyboardButton("Основная группа", url='https://t.me/brythbit') #1 ссылка
-    brainflayer = types.InlineKeyboardButton("Как пользоваться BrainFlayer", url='https://t.me/brythbit/189') #2 Ссылка
+    osnovgroup= types.InlineKeyboardButton("Text", url='https://url.com') #1 ссылка
+    brainflayer = types.InlineKeyboardButton("Text", url='https://url.com') #2 Ссылка
     markup.add(osnovgroup, brainflayer)
     mention = f'[{message.from_user.first_name}](tg://user?id={message.from_user.id})' #Это ссылка на имя человека который зашёл
     #===============================Это всё текст =======================
@@ -28,13 +25,7 @@ def start(message):
 7. Неуважительное отношение к людям (НЕ ЗВОНИТЬ И НЕ РЫГАТЬ В ТРУБКИ)
 8. Выдавать себя за админа (любого)
 
-<i>Спасибо за то, что Вы с нами!
-По вопросам и улучшению писать <a href="t.me/xopmc">
-💪XopMC💪
-</a><a href="t.me/Szatan0">💥Szatan0💥
-</a><a href="t.me/lordix_badaboom">🔥Lordix_badaboom🔥
-</a><a href="t.me/markelox_off">✨ЖМЫХ✨
-</a></i>
+<i>Спасибо за то, что Вы с нами!</i>
     """
 #======================================================================
 
