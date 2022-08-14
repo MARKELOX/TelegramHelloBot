@@ -9,7 +9,7 @@ def start(message):
     osnovgroup= types.InlineKeyboardButton("Text", url='https://url.com') #1 ссылка
     brainflayer = types.InlineKeyboardButton("Text", url='https://url.com') #2 Ссылка
     markup.add(osnovgroup, brainflayer)
-    mention = f'[{message.from_user.first_name}](tg://user?id={message.from_user.id})' #Это ссылка на имя человека который зашёл
+    mention = f'<a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>' #Это ссылка на имя человека который зашёл
     #===============================Это всё текст =======================
     messagechat = f"""
     Добро Пожаловать в чат канала <a href="t.me/URL">💢NAME💢</a> !!!
